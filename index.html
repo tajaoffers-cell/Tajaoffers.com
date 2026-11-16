@@ -1864,18 +1864,14 @@
             mode: "no-cors",
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify({
-              orderNo,
-              name,
-              phone,
-              division,
-              district,
-              thana,
-              street,
-              fullAddress,
-              productsText,
-              subtotal,
-              delivery,
-              grandTotal
+            orderId: orderNo,
+customerName: name,
+phone: "'" + phone,
+division: division,
+district: district,
+address: `${thana} — ${street}`,
+product: productsText,
+total: grandTotal
             })
           });
         } catch (err) {
